@@ -1,0 +1,144 @@
+button:active, button:focus {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+}
+
+input:active, input:focus {
+	outline: none;
+}
+
+input::-moz-focus-inner {
+	border: 0;
+}
+
+textarea:active, textarea:focus {
+	outline: none;
+}
+
+textarea::-moz-focus-inner {
+	border: 0;
+}
+
+/* CHECKED START */
+
+
+
+/* #eyelashest:active + .order-form+.form-check {
+	border: 2px solid #E44C65;
+	
+} */
+
+/* #checkbox-1:checked + .slide-menu>.slide-home {
+	transition: 0.5s;
+	top: 55px;
+} */
+
+/* #checkbox-1:checked + .slide-menu>.slide-about {
+	transition: 0.5s;
+	top: 95px;
+} */
+
+/* #checkbox-1:checked + .slide-menu>.slide-clients {
+	transition: 0.5s;
+	top: 135px;
+} */
+
+/* #checkbox-1:checked + .slide-menu>.slide-gallery {
+	transition: 0.5s;
+	top: 175px;
+} */
+
+/* #checkbox-1:checked + .slide-menu>.slide-contact {	
+	transition: 0.5s;
+	top: 215px;
+} */
+
+/* #checkbox-1 {
+	display: none;
+} */
+
+
+/* CHECKED END */
+
+/* HOVER START */
+
+/* .send-btn:hover {
+	background-color: #212222;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+} */
+
+/* .send-btn:hover, .order-btn:hover, .slick-dots li button:hover {
+	background-color: #212222;
+	transition: 0.3s;
+} */
+
+.avatar-list:hover {
+	background-color: #304352;
+	-webkit-transition-duration: 0.4s !important;
+	     -o-transition-duration: 0.4s !important;
+	        transition-duration: 0.4s !important;
+}
+
+.avatar-list:hover .avatar-link {
+	top: 18%;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.avatar-list:hover .avatar-tittle {
+	top: 60%;
+	-webkit-transition: 0.5s cubic-bezier(.44,-0.24,.65,1.38);
+	-o-transition: 0.5s cubic-bezier(.44,-0.24,.65,1.38);
+	transition: 0.5s cubic-bezier(.44,-0.24,.65,1.38);
+}
+
+.avatar-list:hover .text-animation {
+	top: 80%;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.avatar-list:hover .avatar-text {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	    transform: scale(1);
+	-webkit-transition: 0.4s cubic-bezier(.25,-0.35,.75,1.35);
+	-o-transition: 0.4s cubic-bezier(.25,-0.35,.75,1.35);
+	transition: 0.4s cubic-bezier(.25,-0.35,.75,1.35);
+	transition-delay: 0.1s;
+
+}
+
+
+
+.footer-link:hover, .social-link:hover {
+	background-color: #FEFEFE;
+	color: #E44C65;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+#btn-home:hover .top-btn {
+	background-color: #E44C65;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#btn-home:hover .top-arrow {
+	border-color: #FFFFFF;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+/* HOVER END */
