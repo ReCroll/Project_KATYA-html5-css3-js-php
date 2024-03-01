@@ -486,7 +486,7 @@
     align-items: start;
     width: 100%;
     height: 100%;
-    max-height: 380px;
+    /* max-height: 380px; */
     /* max-height: 360px; */
     overflow: auto;
     /* background-color: rgb(133, 23, 23); */
@@ -520,9 +520,9 @@
   }
   .navigation-list a {
     width: 100%;
-    color: #d0d3d7;
+    color: #555;
     margin: 0;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     transition: all 0.4s ease 0s;
   }
   .navigation-list a:hover {
@@ -681,6 +681,7 @@
     line-height: 20px;
     font-weight: 400;
     font-size: 18px;
+		letter-spacing: 0px;
     
   }
   /* .gallery-list:hover .animation-textblock {
@@ -726,7 +727,7 @@
   .animation-text {
     line-height: 18px;
     font-size: 16px;
-    letter-spacing: 2px;
+    /* letter-spacing: 0px; */
   }
 
   .animation-tittle {

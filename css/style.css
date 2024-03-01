@@ -1256,22 +1256,22 @@ header {
   -webkit-box-shadow: 0 0 26px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 26px rgba(0, 0, 0, 0.8);
 }
-
+/* 
 .area-one {
   background-image: url(../img/gallery-1.jpg);
   background-position: 50% 45%;
-}
+} */
 
-.area-two {
+/* .area-two {
   background-image: url(../img/lamination-beforeafter2.jpg);
   background-position: 50% 45%;
-  /* zoom: 0.75; */
-  /* transform-origin: center center;
-	transform: rotate(-90deg); */
+  zoom: 0.75;
+  transform-origin: center center;
+	transform: rotate(-90deg);
   
-}
+} */
 
-.area-three {
+/* .area-three {
   background-image: url(../img/gallery-3.jpg);
   background-position: 50% 45%;
 }
@@ -1279,8 +1279,8 @@ header {
 .area-four {
   background-image: url(../img/gallery-4.jpg);
   background-position: 50% 70%;
-  /* zoom: 0.45; */
-}
+  zoom: 0.45;
+} */
 
 /* .view .view-area {
 	background-image: url(https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/46480319_478592959214335_7426150599705493504_n.jpg?_nc_cat=104&_nc_ht=scontent-frt3-1.xx&oh=b9ab1c51052de8c7fa1672680d152336&oe=5CA7FEE5);
@@ -1400,6 +1400,7 @@ header {
   font-weight: 300;
   font-size: 15px;
   letter-spacing: 2px;
+	text-wrap: balance;
 }
 
 .animation-button {
@@ -1875,6 +1876,24 @@ textarea {
   animation-duration: .8s;
   animation-fill-mode: forwards; */
 
+}
+.popup__gallery-body .popup__content {
+	width: 80vw;
+	/* height: 60vh; */
+	/* height: auto; */
+	max-width: 960px;
+	/* max-height: 720px; */
+	min-width: 320px;
+	padding-top: 45%;
+	/* min-height: 240px; */
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 #popupTwo.open .popup__two{
   border: 2px solid #f27474;
