@@ -1081,6 +1081,20 @@ header {
 	    -ms-flex-pack: justify; */
   justify-content: space-between;
 }
+.slick-dots li {
+	transition: all 0.3s ease 0s;
+}
+.slick-dots li button:before {
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #d0d3d7;
+	transition: all 0.3s ease 0s;
+} 
 
 .avatar-list {
   width: 350px;

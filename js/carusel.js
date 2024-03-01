@@ -5,6 +5,7 @@ $("#sl").slick({
   speed: 800,
   slidesToShow: 3,
   slidesToScroll: 2,
+  dots: false,
 
   responsive: [
     {
@@ -13,7 +14,7 @@ $("#sl").slick({
         slidesToShow: 2,
         slidesToScroll: 2,
         // infinite: true,
-        // dots: true
+        dots: true,
       },
     },
     {
@@ -21,6 +22,7 @@ $("#sl").slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: true,
       },
     },
     {
