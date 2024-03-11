@@ -21,15 +21,15 @@
 
 
 	<!-- <link rel="stylesheet" href="css/modern-normalize.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/animation.css" type="text/css" />
-    <link rel="stylesheet" href="css/fm.revealator.jquery.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="slick/slick/slick.css" />
-    <link rel="stylesheet" href="slick/slick/slick-theme.css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="stylesheet" href="css/media.css" /> -->
+				<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+				<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+				<link rel="stylesheet" href="css/animation.css" type="text/css" />
+				<link rel="stylesheet" href="css/fm.revealator.jquery.css" />
+				<link rel="stylesheet" href="css/footer.css" />
+				<link rel="stylesheet" href="slick/slick/slick.css" />
+				<link rel="stylesheet" href="slick/slick/slick-theme.css" />
+				<link rel="stylesheet" href="css/style.css" type="text/css" />
+				<link rel="stylesheet" href="css/media.css" /> -->
 </head>
 
 <body>
@@ -71,19 +71,24 @@
 				<nav class="navigation">
 					<ul class="header-navigation">
 						<li class="navigation-list">
-							<div class="circle one"></div><a href="#home" class="navigation-link one">замовити</a>
+							<div class="circle one"></div><a href="#" data-goto="#home"
+								class="menu__link navigation-link one">замовити</a>
 						</li>
 						<li class="navigation-list">
-							<div class="circle two"></div><a href="#about" class="navigation-link two">про мене</a>
+							<div class="circle two"></div><a href="#" data-goto="#about" class="menu__link navigation-link two">про
+								мене</a>
 						</li>
 						<li class="navigation-list">
-							<div class="circle three"></div><a href="#client" class="navigation-link three">клієнти</a>
+							<div class="circle three"></div><a href="#" data-goto="#client"
+								class="menu__link navigation-link three">клієнти</a>
 						</li>
 						<li class="navigation-list">
-							<div class="circle four"></div><a href="#gallery" class="navigation-link four">галерея</a>
+							<div class="circle four"></div><a href="#" data-goto="#gallery"
+								class="menu__link navigation-link four">галерея</a>
 						</li>
 						<li class="navigation-list">
-							<div class="circle five"></div><a href="#contact" class="navigation-link five">зв’язатись</a>
+							<div class="circle five"></div><a href="#" data-goto="#contact" data-goto="contact"
+								class="menu__link navigation-link five">зв’язатись</a>
 						</li>
 					</ul>
 				</nav>
@@ -92,24 +97,24 @@
 
 
 			<!-- <div>
-          <ul>
-            <li class="slide-list slide-home">
-              <a href="#home">замовити</a>
-            </li>
-            <li class="slide-list slide-about">
-              <a href="#about">про мене</a>
-            </li>
-            <li class="slide-list slide-clients">
-              <a href="#client">клієнти</a>
-            </li>
-            <li class="slide-list slide-gallery">
-              <a href="#gallery">галерея</a>
-            </li>
-            <li class="slide-list slide-contact">
-              <a href="#contact">зв’язатись</a>
-            </li>
-          </ul>
-        </div> -->
+							<ul>
+								<li class="slide-list slide-home">
+									<a href="#home">замовити</a>
+								</li>
+								<li class="slide-list slide-about">
+									<a href="#about">про мене</a>
+								</li>
+								<li class="slide-list slide-clients">
+									<a href="#client">клієнти</a>
+								</li>
+								<li class="slide-list slide-gallery">
+									<a href="#gallery">галерея</a>
+								</li>
+								<li class="slide-list slide-contact">
+									<a href="#contact">зв’язатись</a>
+								</li>
+							</ul>
+						</div> -->
 		</header>
 
 		<main>
@@ -152,11 +157,11 @@
 
 						<div id="serviceValidation" class="service__validation">
 							<!-- <div class="close__form">
-                  <ul>
-                    <li class="burger__btn line__one"></li>
-                    <li class="burger__btn line__two"></li>
-                  </ul>
-                </div> -->
+											<ul>
+												<li class="burger__btn line__one"></li>
+												<li class="burger__btn line__two"></li>
+											</ul>
+										</div> -->
 							<input id="eyelashes" type="checkbox" name="eyelashes" value="Вії" class="checkbox" />
 							<label for="eyelashes" class="form-check">
 								<p class="order-name">Вії</p>
@@ -195,12 +200,12 @@
 
 
 						<!-- <input id="hairdresser" type="checkbox" name="ch[]" value="Перукар" class="checkbox"/>
-              <label for="hairdresser" class="form-check">
-                <p class="order-name">Перукарські послуги</p>
-                <div class="check-mark">
-                    <i></i>
-                </div>
-              </label> -->
+									<label for="hairdresser" class="form-check">
+										<p class="order-name">Перукарські послуги</p>
+										<div class="check-mark">
+												<i></i>
+										</div>
+									</label> -->
 
 						<div class="form-name-block" id="formOne">
 							<input name="name" type="text" class="order-form-name req form__one" placeholder="Ваше ім’я" />
@@ -223,8 +228,8 @@
 			<div id="about"></div>
 			<div class="business-wrap">
 				<!-- <div class="label">
-            revealator-slideup revealator-delay#
-				</div> -->
+								revealator-slideup revealator-delay#
+						</div> -->
 				<div class="business-card">
 					<div class="card revealator-slideup revealator-once revealator-duration10 revealator-fade"></div>
 					<div class="avatar-block">
@@ -335,21 +340,21 @@
 								</div>
 							</div>
 							<!-- <div class="sl-slide">
-                  <div class="avatar-list avatar-eight">
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100017530241308"
-                      class="avatar-link link-eight"
-                    ></a>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100017530241308"
-                      class="avatar-tittle"
-                      >Наталия Лучко</a
-                    >
-                    <div class="text-animation">
-                      <p class="avatar-text">Віддає перевагу ламінуванню вій</p>
-                    </div>
-                  </div>
-                </div> -->
+											<div class="avatar-list avatar-eight">
+												<a
+													href="https://www.facebook.com/profile.php?id=100017530241308"
+													class="avatar-link link-eight"
+												></a>
+												<a
+													href="https://www.facebook.com/profile.php?id=100017530241308"
+													class="avatar-tittle"
+													>Наталия Лучко</a
+												>
+												<div class="text-animation">
+													<p class="avatar-text">Віддає перевагу ламінуванню вій</p>
+												</div>
+											</div>
+										</div> -->
 						</div>
 					</div>
 				</div>
@@ -454,50 +459,50 @@
 						</div>
 						<!-- </div> -->
 						<!-- <li class="gallery-list list-five">
-							<div class="gallery-animation">
-								<div class="animation-textblock">
-									<p class="animation-tittle">Ім’я<br>Прізвище</p>
-									<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
-								</div>
-								<a href="#"><button class="animation-button">Розглянути</button></a>
-							</div>
-						</li>
-						<li class="gallery-list list-six">
-							<div class="gallery-animation">
-								<div class="animation-textblock">
-									<p class="animation-tittle">Ім’я<br>Прізвище</p>
-									<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
-								</div>
-								<a href="#"><button class="animation-button">Розглянути</button></a>
-							</div>
-						</li>
-						<li class="gallery-list list-seven">
-							<div class="gallery-animation">
-								<div class="animation-textblock">
-									<p class="animation-tittle">Ім’я<br>Прізвище</p>
-									<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
-								</div>
-								<a href="#"><button class="animation-button">Розглянути</button></a>
-							</div>
-						</li>
-						<li class="gallery-list list-eight">
-							<div class="gallery-animation">
-								<div class="animation-textblock">
-									<p class="animation-tittle">Ім’я<br>Прізвище</p>
-									<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
-								</div>
-								<a href="#"><button class="animation-button">Розглянути</button></a>
-							</div>
-						</li>
-						<li class="gallery-list list-nine">
-							<div class="gallery-animation">
-								<div class="animation-textblock">
-									<p class="animation-tittle">Ім’я<br>Прізвище</p>
-									<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
-								</div>
-								<a href="#"><button class="animation-button">Розглянути</button></a>
-							</div>
-						</li> -->
+									<div class="gallery-animation">
+										<div class="animation-textblock">
+											<p class="animation-tittle">Ім’я<br>Прізвище</p>
+											<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
+										</div>
+										<a href="#"><button class="animation-button">Розглянути</button></a>
+									</div>
+								</li>
+								<li class="gallery-list list-six">
+									<div class="gallery-animation">
+										<div class="animation-textblock">
+											<p class="animation-tittle">Ім’я<br>Прізвище</p>
+											<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
+										</div>
+										<a href="#"><button class="animation-button">Розглянути</button></a>
+									</div>
+								</li>
+								<li class="gallery-list list-seven">
+									<div class="gallery-animation">
+										<div class="animation-textblock">
+											<p class="animation-tittle">Ім’я<br>Прізвище</p>
+											<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
+										</div>
+										<a href="#"><button class="animation-button">Розглянути</button></a>
+									</div>
+								</li>
+								<li class="gallery-list list-eight">
+									<div class="gallery-animation">
+										<div class="animation-textblock">
+											<p class="animation-tittle">Ім’я<br>Прізвище</p>
+											<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
+										</div>
+										<a href="#"><button class="animation-button">Розглянути</button></a>
+									</div>
+								</li>
+								<li class="gallery-list list-nine">
+									<div class="gallery-animation">
+										<div class="animation-textblock">
+											<p class="animation-tittle">Ім’я<br>Прізвище</p>
+											<p class="animation-text">Якийсь текст, для кращого вигляду, треба попросити кохану щоб придумала</p>
+										</div>
+										<a href="#"><button class="animation-button">Розглянути</button></a>
+									</div>
+								</li> -->
 					</ul>
 				</div>
 
@@ -568,8 +573,8 @@
 					</div>
 					<div class="revealator-slideup revealator-delay8 revealator-once revealator-duration15 revealator-fade">
 						<!-- <li class="social-list">
-                <a href="#" class="social-link">vk</a>
-              </li> -->
+										<a href="#" class="social-link">vk</a>
+									</li> -->
 					</div>
 				</ul>
 				<div class="revealator-slideup revealator-delay13 revealator-once revealator-duration15 revealator-fade">

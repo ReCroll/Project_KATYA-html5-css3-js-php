@@ -650,90 +650,89 @@ $(function () {
   });
 });
 
-// $(window).scroll(function() {
-//   $(this).scrollTop()>=200
-//     // длительность анимации - 'slow'
-//     // тип анимации -  'linear'
-//     $('.test-view').fadeOut('slow','linear');
+// ===================== MENU BURGER ==========================
+let iconMenu = document.querySelector(".slide-menu");
+// let menuPackage = document.querySelector("._package");
+let menuBody = document.querySelector(".navigation");
+// const headerMenu = document.querySelector(".header__menu");
+if (iconMenu) {
+  iconMenu.addEventListener("click", function () {
+    document.body.classList.toggle("lock");
+    iconMenu.classList.toggle("activation");
+    // menuPackage.classList.toggle("_active");
+    menuBody.classList.toggle("activation");
+    // menuBody.classList.toggle("__container");
+    // headerMenu.classList.toggle("_active");
+  });
+}
+let menuMobile = document.getElementsByClassName("navigation");
+for (let index = 0; index < menuMobile.length; index++) {
+  const el = menuMobile[index];
+  iconMenu.addEventListener("click", function (e) {
+    if (iconMenu.classList.contains("activation")) {
+      let mobileMenuLinks = el.querySelectorAll("a");
+      console.log(mobileMenuLinks);
+      mobileMenuLinks.forEach((mobileLink) => {
+        mobileLink.addEventListener("click", () => {
+          mobileLink.closest(".navigation").classList.remove("activation");
+          // mobileLink.closest(".navigation").classList.remove("__container");
+          // mobileLink.closest(".header__menu").classList.remove("_active");
+          iconMenu.classList.remove("activation");
+          // iconMenu.classList.remove("_active");
+          if (document.body.classList.contains("lock")) {
+            document.body.classList.remove("lock");
+          }
+        });
+      });
+      // console.log(mobileLink);
+      // console.log(mobileMenuLinks);
+    }
+    // console.log(el);
+    e.preventDefault();
+  });
+}
+// if (menu.classList.contains("_active")) {
+//   let mobileMenuLinks = menu.getAttribute("a");
+//   console.log(mobileMenuLinks);
+// }
 // });
+// console.log(menuMobile);
 
-// -------------------- //
-// MENU
-// ---------------------//
+//============================== ПРОКРУТКА ДО БЛОКА ===============
 
-// $('.navigation-block').click(function(e) {
-//   e.preventDefault();
-//   $(this).closest('.slide-menu').toggleClass('active');
-// });
+const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
+if (menuLinks.length > 0) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
 
-// $(".slide-list").click(function(e) {
-//   $(this).closest(".slide-menu").removeClass("active");
-// });
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (
+      menuLink.dataset.goto &&
+      document.querySelector(menuLink.dataset.goto)
+    ) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue =
+        gotoBlock.getBoundingClientRect().top +
+        scrollY -
+        document.querySelector("header").offsetHeight;
 
-// $(document).mouseup(function (e) {
-//   var container = $('.slide-menu');
-//   if (container.find('ul').has(e.target).length === 1 &&
-//       $(e.target).closest('.slide-menu ul').length === 2){
-//     container.removeClass('slow');
-//   }
-// });
-$(document).ready(function () {
-  $(".slide-menu").click(function () {
-    $(".slide-menu, .navigation").toggleClass("activation");
-    $("body").toggleClass("lock");
-  });
-});
-
-$(document).ready(function () {
-  $(".navigation-link.one").click(function () {
-    $(".circle.one").toggleClass("activation");
-    $(".circle.two, .circle.three, .circle.four, .circle.five").removeClass(
-      "activation"
-    );
-    $(".slide-menu, .navigation").removeClass("activation");
-    $("body").toggleClass("lock");
-  });
-});
-$(document).ready(function () {
-  $(".navigation-link.two").click(function () {
-    $(".circle.two").toggleClass("activation");
-    $(".circle.one, .circle.three, .circle.four, .circle.five").removeClass(
-      "activation"
-    );
-    $(".slide-menu, .navigation").removeClass("activation");
-    $("body").toggleClass("lock");
-  });
-});
-$(document).ready(function () {
-  $(".navigation-link.three").click(function () {
-    $(".circle.three").toggleClass("activation");
-    $(".circle.one, .circle.two, .circle.four, .circle.five").removeClass(
-      "activation"
-    );
-    $(".slide-menu, .navigation").removeClass("activation");
-    $("body").toggleClass("lock");
-  });
-});
-$(document).ready(function () {
-  $(".navigation-link.four").click(function () {
-    $(".circle.four").toggleClass("activation");
-    $(".circle.one, .circle.two, .circle.three, .circle.five").removeClass(
-      "activation"
-    );
-    $(".slide-menu, .navigation").removeClass("activation");
-    $("body").toggleClass("lock");
-  });
-});
-$(document).ready(function () {
-  $(".navigation-link.five").click(function () {
-    $(".circle.five").toggleClass("activation");
-    $(".circle.one, .circle.two, .circle.three, .circle.four").removeClass(
-      "activation"
-    );
-    $(".slide-menu, .navigation").removeClass("activation");
-    $("body").toggleClass("lock");
-  });
-});
+      if (iconMenu.classList.contains("activation")) {
+        document.body.classList.remove("lock");
+        iconMenu.classList.remove("activation");
+        menuBody.classList.remove("activation");
+        // headerMenu.classList.remove("_active");
+      }
+      // $("body,html").animate({ scrollTop: top }, 1500);
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth",
+      });
+      e.preventDefault();
+    }
+  }
+}
 
 // -------------------- //
 // SCROLLING-TOP
@@ -760,115 +759,6 @@ jQuery(function (f) {
     element["fade" + (f(this).scrollTop() > 230 ? "In" : "Out")](0);
   });
 });
-
-// // -------------------- //
-// // SCROLLING
-// // ---------------------//
-
-$(document).ready(function () {
-  $(".navigation").on("click", "a", function (event) {
-    //отменяем стандартную обработку нажатия по ссылке
-    event.preventDefault();
-
-    //забираем идентификатор бока с атрибута href
-    var id = $(this).attr("href"),
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-      top = $(id).offset().top;
-
-    //анимируем переход на расстояние - top за 1500 мс
-    $("body,html").animate({ scrollTop: top }, 1500);
-  });
-});
-
-// $(document).ready(function(){
-// 	$(".slide-menu").on("click","a", function (event) {
-// 			//отменяем стандартную обработку нажатия по ссылке
-// 			event.preventDefault();
-
-// 			//забираем идентификатор бока с атрибута href
-// 			var id  = $(this).attr('href'),
-
-// 			//узнаем высоту от начала страницы до блока на который ссылается якорь
-// 					top = $(id).offset().top;
-
-// 			//анимируем переход на расстояние - top за 1500 мс
-// 			$('body,html').animate({scrollTop: top}, 1500);
-// 	});
-// });
-
-// $(document).ready(function(){
-// 	$(".header-logo").on("click","a", function (event) {
-// 			//отменяем стандартную обработку нажатия по ссылке
-// 			event.preventDefault();
-
-// 			//забираем идентификатор бока с атрибута href
-// 			var id  = $(this).attr('href'),
-
-// 			//узнаем высоту от начала страницы до блока на который ссылается якорь
-// 					top = $(id).offset().top;
-
-// 			//анимируем переход на расстояние - top за 1500 мс
-// 			$('body,html').animate({scrollTop: top}, 1500);
-// 	});
-// });
-
-// $(document).ready(function(){
-// 	$(".revealator-slideup").on("click","a", function (event) {
-// 			//отменяем стандартную обработку нажатия по ссылке
-// 			event.preventDefault();
-
-// 			//забираем идентификатор бока с атрибута href
-// 			var id  = $(this).attr('href'),
-
-// 			//узнаем высоту от начала страницы до блока на который ссылается якорь
-// 					top = $(id).offset().top;
-
-// 			//анимируем переход на расстояние - top за 1500 мс
-// 			$('body,html').animate({scrollTop: top}, 1500);
-// 	});
-// });
-
-// -------------------- //
-// CARUSEL
-// ---------------------//
-
-// $('#sl').slick({
-// 	dots: true,
-// 	arrows: false,
-//   infinite: false,
-//   speed: 800,
-//   slidesToShow: 3,
-// 	slidesToScroll: 3,
-
-//   responsive: [
-//     {
-//       breakpoint: 1200,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 2,
-//         infinite: true,
-//         dots: true
-//       }
-// 		},
-//     {
-//       breakpoint: 580,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1
-//       }
-//     }
-//     // You can unslick at a given breakpoint now by adding:
-//     // settings: "unslick"
-//     // instead of a settings object
-//   ]
-// });
 
 // ------------------------//
 // ORDER FORM
